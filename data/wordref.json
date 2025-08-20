@@ -1,0 +1,303 @@
+{
+  "declensions": {
+    "1": {
+      "Singular": {
+        "Nominative": "a",
+        "Vocative": "a",
+        "Accusative": "am",
+        "Genitive": "ae",
+        "Dative": "ae",
+        "Ablative": "ā",
+        "Locative": "ae"
+      },
+      "Plural": {
+        "Nominative": "ae",
+        "Vocative": "ae",
+        "Accusative": "ās",
+        "Genitive": "ārum",
+        "Dative": "īs",
+        "Ablative": "īs",
+        "Locative": "īs"
+      }
+    },
+    "2": {
+      "Singular": {
+        "Masculine": {
+          "Nominative": "us",
+          "Vocative": "e",
+          "Accusative": "um",
+          "Genitive": "ī",
+          "Dative": "ō",
+          "Ablative": "ō",
+          "Locative": "ī"
+        },
+        "Neuter": {
+          "Nominative": "um",
+          "Vocative": "um",
+          "Accusative": "um",
+          "Genitive": "ī",
+          "Dative": "ō",
+          "Ablative": "ō",
+          "Locative": "ī"
+        }
+      },
+      "Plural": {
+        "Masculine": {
+          "Nominative": "ī",
+          "Vocative": "ī",
+          "Accusative": "ōs",
+          "Genitive": "ōrum",
+          "Dative": "īs",
+          "Ablative": "īs",
+          "Locative": "īs"
+        },
+        "Neuter": {
+          "Nominative": "a",
+          "Vocative": "a",
+          "Accusative": "a",
+          "Genitive": "ōrum",
+          "Dative": "īs",
+          "Ablative": "īs",
+          "Locative": "īs"
+        }
+      }
+    },
+    "3": {
+      "Pure": {
+        "Singular": {
+          "Masculine": {
+            "Nominative": "",
+            "Vocative": "",
+            "Accusative": "em",
+            "Genitive": "is",
+            "Dative": "ī",
+            "Ablative": "e",
+            "Locative": "ī"
+          },
+          "Feminine": {
+            "Nominative": "",
+            "Vocative": "",
+            "Accusative": "em",
+            "Genitive": "is",
+            "Dative": "ī",
+            "Ablative": "e",
+            "Locative": "ī"
+          },
+          "Neuter": {
+            "Nominative": "",
+            "Vocative": "",
+            "Accusative": "",
+            "Genitive": "is",
+            "Dative": "ī",
+            "Ablative": "ī",
+            "Locative": "ī"
+          }
+        },
+        "Plural": {
+          "Masculine": {
+            "Nominative": "ēs",
+            "Vocative": "ēs",
+            "Accusative": "īs",
+            "Genitive": "ium",
+            "Dative": "ibus",
+            "Ablative": "ibus",
+            "Locative": "ibus"
+          },
+          "Feminine": {
+            "Nominative": "ēs",
+            "Vocative": "ēs",
+            "Accusative": "īs",
+            "Genitive": "ium",
+            "Dative": "ibus",
+            "Ablative": "ibus",
+            "Locative": "ibus"
+          },
+          "Neuter": {
+            "Nominative": "ia",
+            "Vocative": "ia",
+            "Accusative": "ia",
+            "Genitive": "ium",
+            "Dative": "ibus",
+            "Ablative": "ibus",
+            "Locative": "ibus"
+          }
+        }
+      },
+      "Mixed": {
+        "Singular": {
+          "Masculine": {
+            "Nominative": "",
+            "Vocative": "",
+            "Accusative": "em",
+            "Genitive": "is",
+            "Dative": "ī",
+            "Ablative": "e",
+            "Locative": "ī"
+          },
+          "Feminine": {
+            "Nominative": "",
+            "Vocative": "",
+            "Accusative": "em",
+            "Genitive": "is",
+            "Dative": "ī",
+            "Ablative": "e",
+            "Locative": "ī"
+          },
+          "Neuter": {
+            "Nominative": "",
+            "Vocative": "",
+            "Accusative": "",
+            "Genitive": "is",
+            "Dative": "ī",
+            "Ablative": "e",
+            "Locative": "ī"
+          }
+        },
+        "Plural": {
+          "Masculine": {
+            "Nominative": "ēs",
+            "Vocative": "ēs",
+            "Accusative": "īs",
+            "Genitive": "ium",
+            "Dative": "ibus",
+            "Ablative": "ibus",
+            "Locative": "ibus"
+          },
+          "Feminine": {
+            "Nominative": "ēs",
+            "Vocative": "ēs",
+            "Accusative": "īs",
+            "Genitive": "ium",
+            "Dative": "ibus",
+            "Ablative": "ibus",
+            "Locative": "ibus"
+          },
+          "Neuter": {
+            "Nominative": "a",
+            "Vocative": "a",
+            "Accusative": "a",
+            "Genitive": "ium",
+            "Dative": "ibus",
+            "Ablative": "ibus",
+            "Locative": "ibus"
+          }
+        }
+      }
+    },
+
+    "4": {
+      "us": {
+        "Singular": {
+          "Nominative": "us",
+          "Vocative": "us",
+          "Accusative": "um",
+          "Genitive": "ūs",
+          "Dative": "uī",
+          "Ablative": "ū",
+          "Locative": "ī"
+        },
+        "Plural": {
+          "Nominative": "ūs",
+          "Vocative": "ūs",
+          "Accusative": "ūs",
+          "Genitive": "uum",
+          "Dative": "ibus",
+          "Ablative": "ibus",
+          "Locative": "ibus"
+        }
+      },
+      "u": {
+        "Singular": {
+          "Nominative": "ū",
+          "Vocative": "ū",
+          "Accusative": "ū",
+          "Genitive": "ūs",
+          "Dative": "ū",
+          "Ablative": "ū",
+          "Locative": "ī"
+        },
+        "Plural": {
+          "Nominative": "ua",
+          "Vocative": "ua",
+          "Accusative": "ua",
+          "Genitive": "uum",
+          "Dative": "ibus",
+          "Ablative": "ibus",
+          "Locative": "ibus"
+        }
+      }
+    },
+
+    "5": {
+      "ies": {
+        "Singular": {
+          "Nominative": "iēs",
+          "Vocative": "iēs",
+          "Accusative": "iem",
+          "Genitive": "iēī",
+          "Dative": "iēī",
+          "Ablative": "iē",
+          "Locative": "iē"
+        },
+        "Plural": {
+          "Nominative": "iēs",
+          "Vocative": "iēs",
+          "Accusative": "iēs",
+          "Genitive": "iērum",
+          "Dative": "iēbus",
+          "Ablative": "iēbus",
+          "Locative": "iēbus"
+        }
+      },
+      "es": {
+        "Singular": {
+          "Nominative": "ēs",
+          "Vocative": "ēs",
+          "Accusative": "em",
+          "Genitive": "eī",
+          "Dative": "eī",
+          "Ablative": "ē",
+          "Locative": "ē"
+        },
+        "Plural": {
+          "Nominative": "ēs",
+          "Vocative": "ēs",
+          "Accusative": "ēs",
+          "Genitive": "ērum",
+          "Dative": "ēbus",
+          "Ablative": "ēbus",
+          "Locative": "ēbus"
+        }
+      }
+    }
+  },
+
+  "words": {
+    "1": [
+        { "word": "mens", "gender": "f" },
+        { "word": "puell", "gender": "f" },
+        { "word": "poēt", "gender": "m" },
+        { "word": "naut", "gender": "m" }
+      ],
+    "2": [
+        { "word": "domin", "gender": "m" },
+        { "word": "puer", "gender": "m" },
+        { "word": "bell", "gender": "n" }
+      ],
+    "3": [
+        { "word": "turr", "gender": "f", "nom": "turris", "type": "pure" },
+        { "word": "part", "gender": "f", "nom": "pars", "type": "mixed" },
+        { "word": "animal", "gender": "n", "nom": "animal", "type": "pure" }
+      ],
+    "4": [
+        { "word": "port", "gender": "m", "type": "us" },
+        { "word": "gen", "gender": "n", "type": "u" }
+      ],
+    "5": [
+        { "word": "d", "gender": "f", "type": "ies" },
+        { "word": "r", "gender": "f", "type": "es" }
+    ]
+    
+  }
+
+}
