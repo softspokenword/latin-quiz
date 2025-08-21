@@ -36,7 +36,7 @@ export default function Results() {
         setLoading(false);
 
         // Clean up localStorage
-        localStorage.removeItem('quizAnswers');
+        // localStorage.removeItem('quizAnswers');
     }, [router]);
 
     const handleRetakeQuiz = () => {
@@ -173,7 +173,7 @@ export default function Results() {
                         onClick={handleRetakeQuiz}
                         className="px-6 py-3 bg-blue-600 hover:bg-blue-700"
                     >
-                        Retake Quiz
+                        Regenerate Quiz
                     </Button>
                     <Button
                         variant="outlined"

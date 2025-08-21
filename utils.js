@@ -101,12 +101,46 @@ export class QuizGenerator {
         return this.settings.cases[Math.floor(Math.random() * this.settings.cases.length)];
     }
 
+    getRandomGender(declension) {
+        switch (declension) {
+            case 2:
+                // 2nd declension has Masculine and Neuter
+                return Math.random() < 0.5 ? 'Masculine' : 'Neuter';
+            case 3:
+                // 3rd declension has all three genders
+                const genders = ['Masculine', 'Feminine', 'Neuter'];
+                return genders[Math.floor(Math.random() * genders.length)];
+            default:
+                return null; // 1st, 4th, and 5th declensions don't need gender specification
+        }
+    }
+
+    getRandomType(declension) {
+        switch (declension) {
+            case 3:
+                // 3rd declension has Pure and Mixed types
+                return Math.random() < 0.5 ? 'Pure' : 'Mixed';
+            case 4:
+                // 4th declension has 'us' and 'u' types
+                return Math.random() < 0.5 ? 'us' : 'u';
+            case 5:
+                // 5th declension has 'ies' and 'es' types
+                return Math.random() < 0.5 ? 'ies' : 'es';
+            default:
+                return null; // 1st and 2nd declensions don't need type specification
+        }
+    }
+
     // Format 1: Ask for ending given declension info
     generateFormat1Question(declension, number, caseType) {
-        const ending = this.getEnding(declension, number, caseType);
+        // Get random gender/type for declensions that need them
+        const gender = this.getRandomGender(declension);
+        const type = this.getRandomType(declension);
+        
+        const ending = this.getEnding(declension, number, caseType, gender, type);
         if (ending === null) return null;
 
-        const questionText = this.formatQuestionText(declension, number, caseType);
+        const questionText = this.formatQuestionText(declension, number, caseType, gender, type);
         const options = this.generateEndingOptions(ending, declension, number, caseType);
         
         return {
@@ -115,16 +149,22 @@ export class QuizGenerator {
             options: options,
             declension,
             number,
-            case: caseType
+            case: caseType,
+            gender,
+            type
         };
     }
 
     // Format 2: Ask for declension info given ending
     generateFormat2Question(declension, number, caseType) {
-        const ending = this.getEnding(declension, number, caseType);
+        // Get random gender/type for declensions that need them
+        const gender = this.getRandomGender(declension);
+        const type = this.getRandomType(declension);
+        
+        const ending = this.getEnding(declension, number, caseType, gender, type);
         if (ending === null) return null;
 
-        const correctAnswer = this.formatQuestionText(declension, number, caseType);
+        const correctAnswer = this.formatQuestionText(declension, number, caseType, gender, type);
         const options = this.generateDeclensionOptions(correctAnswer, ending);
         
         return {
@@ -133,7 +173,9 @@ export class QuizGenerator {
             options: options,
             declension,
             number,
-            case: caseType
+            case: caseType,
+            gender,
+            type
         };
     }
 
@@ -231,12 +273,15 @@ export class QuizGenerator {
     generateEndingOptions(correctEnding, declension, number, caseType) {
         const options = new Set([correctEnding]);
         
-        // Add some random endings from other declensions/cases
-        for (let i = 1; i <= 5; i++) {
+        // Add some random endings from selected declensions/cases only
+        for (const selectedDeclension of this.settings.declensions) {
             for (const num of ['Singular', 'Plural']) {
                 for (const case_ of this.settings.cases) {
                     if (options.size >= 6) break;
-                    const ending = this.getEnding(i, num, case_);
+                    // Get random gender/type for consistent option generation
+                    const optionGender = this.getRandomGender(selectedDeclension);
+                    const optionType = this.getRandomType(selectedDeclension);
+                    const ending = this.getEnding(selectedDeclension, num, case_, optionGender, optionType);
                     if (ending !== null && ending !== correctEnding) {
                         options.add(ending);
                     }
@@ -252,16 +297,19 @@ export class QuizGenerator {
     generateDeclensionOptions(correctAnswer, avoidEnding = null) {
         const options = new Set([correctAnswer]);
         
-        // Generate some incorrect options
-        for (let i = 1; i <= 5; i++) {
+        // Generate some incorrect options from selected declensions only
+        for (const selectedDeclension of this.settings.declensions) {
             for (const num of ['Singular', 'Plural']) {
                 for (const case_ of this.settings.cases) {
                     if (options.size >= 3) break;
                     
-                    const optionText = this.formatQuestionText(i, num, case_);
+                    // Get random gender/type for consistent option generation
+                    const optionGender = this.getRandomGender(selectedDeclension);
+                    const optionType = this.getRandomType(selectedDeclension);
+                    const optionText = this.formatQuestionText(selectedDeclension, num, case_, optionGender, optionType);
                     if (optionText !== correctAnswer) {
                         // If we have an ending to avoid, check it doesn't match
-                        if (!avoidEnding || this.getEnding(i, num, case_) !== avoidEnding) {
+                        if (!avoidEnding || this.getEnding(selectedDeclension, num, case_, optionGender, optionType) !== avoidEnding) {
                             options.add(optionText);
                         }
                     }

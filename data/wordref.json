@@ -66,8 +66,8 @@
       "Pure": {
         "Singular": {
           "Masculine": {
-            "Nominative": "",
-            "Vocative": "",
+            "Nominative": " ",
+            "Vocative": " ",
             "Accusative": "em",
             "Genitive": "is",
             "Dative": "ī",
@@ -75,8 +75,8 @@
             "Locative": "ī"
           },
           "Feminine": {
-            "Nominative": "",
-            "Vocative": "",
+            "Nominative": " ",
+            "Vocative": " ",
             "Accusative": "em",
             "Genitive": "is",
             "Dative": "ī",
@@ -84,9 +84,9 @@
             "Locative": "ī"
           },
           "Neuter": {
-            "Nominative": "",
-            "Vocative": "",
-            "Accusative": "",
+            "Nominative": " ",
+            "Vocative": " ",
+            "Accusative": " ",
             "Genitive": "is",
             "Dative": "ī",
             "Ablative": "ī",
@@ -126,8 +126,8 @@
       "Mixed": {
         "Singular": {
           "Masculine": {
-            "Nominative": "",
-            "Vocative": "",
+            "Nominative": " ",
+            "Vocative": " ",
             "Accusative": "em",
             "Genitive": "is",
             "Dative": "ī",
@@ -135,8 +135,8 @@
             "Locative": "ī"
           },
           "Feminine": {
-            "Nominative": "",
-            "Vocative": "",
+            "Nominative": " ",
+            "Vocative": " ",
             "Accusative": "em",
             "Genitive": "is",
             "Dative": "ī",
@@ -144,9 +144,9 @@
             "Locative": "ī"
           },
           "Neuter": {
-            "Nominative": "",
-            "Vocative": "",
-            "Accusative": "",
+            "Nominative": " ",
+            "Vocative": " ",
+            "Accusative": " ",
             "Genitive": "is",
             "Dative": "ī",
             "Ablative": "e",
