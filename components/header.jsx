@@ -21,14 +21,24 @@ export function Header() {
         window.location.href = '/';
     };
 
-    return (
-        <header className="flex items-center justify-between w-full py-6">
-            <Link href="/" className="text-2xl font-bold text-white">
+    return ( // flex items-center justify-between w-full py-6
+             // w-full py-8 flex flex-col items-center justify-center
+        <header
+            className="flex items-center justify-center w-full py-6"
+            style={{
+                width: '100vw',
+                background: 'linear-gradient(180deg, #232526 0%, #414345 100%)',
+                color: 'white',
+                marginLeft: 'calc(-50vw + 50%)',
+                marginRight: 'calc(-50vw + 50%)',
+            }}
+        >
+            <Link href="/" className="text-3xl font-bold text-white mb-4 pr-80">
                 Latin Quiz
             </Link>
-            <nav className="flex items-center space-x-4">
+            <nav className="flex flex-col items-center space-y-2">
                 {user ? (
-                    <div className="flex items-center space-x-4">
+                    <div className="flex flex-col items-center space-y-2">
                         <span className="text-white">Welcome, {user.username}!</span>
                         <Button 
                             variant="outlined" 

@@ -76,7 +76,7 @@ export default function QuizSetup() {
     };
 
     return (
-        <Box className="min-h-screen flex items-center justify-center p-4">
+        <Box className="min-h-screen flex items-center justify-center p-4 w-full" >
             <Paper elevation={3} className="p-8 max-w-2xl w-full bg-white">
                 <Typography variant="h3" component="h1" gutterBottom className="text-center text-blue-900 mb-8">
                     Latin Declension Quiz
