@@ -10,9 +10,36 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Quiz {
+
+model Users {
   id        Int      @id @default(autoincrement())
-  question  String
-  answer    String
+  username  String   @unique
+  password  String
+  email     String?   
   createdAt DateTime @default(now())
 }
+
+
+model LoginHistory {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  timestamp DateTime @default(now())
+  ipAddress String?
+  user      Users    @relation(fields: [userId], references: [id])
+}
+
+model Quiz {
+  id             Int      @id @default(autoincrement())
+  userid         Int
+  quizid         Int
+  question_type  Int
+  declension     Int
+  number         Int
+  case           Int
+  gender         Int
+  type           Int
+  answer         Int
+  createdAt      DateTime @default(now())
+  user           Users    @relation(fields: [userid], references: [id])
+}
+
