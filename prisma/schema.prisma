@@ -10,15 +10,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Users {
-  id        Int      @id @default(autoincrement())
-  username  String   @unique
-  password  String
-  email     String?   
-  createdAt DateTime @default(now())
+  id           Int            @id @default(autoincrement())
+  username     String         @unique
+  password     String
+  email        String?
+  createdAt    DateTime       @default(now())
+  LoginHistory LoginHistory[]
+  Quiz         Quiz[]
 }
-
 
 model LoginHistory {
   id        Int      @id @default(autoincrement())
@@ -29,17 +29,16 @@ model LoginHistory {
 }
 
 model Quiz {
-  id             Int      @id @default(autoincrement())
-  userid         Int
-  quizid         Int
-  question_type  Int
-  declension     Int
-  number         Int
-  case           Int
-  gender         Int
-  type           Int
-  answer         Int
-  createdAt      DateTime @default(now())
-  user           Users    @relation(fields: [userid], references: [id])
+  id            Int      @id @default(autoincrement())
+  userid        Int
+  quizid        Int
+  question_type Int
+  declension    Int
+  number        Int
+  case          Int
+  gender        Int
+  type          Int
+  answer        Int
+  createdAt     DateTime @default(now())
+  user          Users    @relation(fields: [userid], references: [id])
 }
-
